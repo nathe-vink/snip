@@ -1,0 +1,1090 @@
+{
+  "meta": {
+    "version": "0.2.0",
+    "last_updated": "2026-03-31",
+    "city": "San Francisco",
+    "state": "California",
+    "notes": "V1 Knowledge Graph for Permit Whisperer. Sources: sftreasurer.org, sf.gov, sfplanning.org, sfdph.org, sf-fire.org, sfgov.org/entertainment, sanfranciscopolice.org, californiaregisteredagent.com, asnanicpa.com, sffta.org, California Secretary of State. All fees and requirements verified against 2025-2026 published schedules. V0.2 adds: music licensing (PRO), ADA/accessibility compliance, SF employer ordinances (HCSO, PSLO, PPLO, Fair Chance, Commuter Benefits), waste/recycling compliance, tobacco restrictions, CASp inspection requirements, Accessible Barrier Removal Grant, and automation flags for each step."
+  },
+  "regulatory_agencies": [
+    {
+      "id": "ttx",
+      "name": "Office of the Treasurer & Tax Collector (TTX)",
+      "role": "Business registration, tax collection, unified license fee billing",
+      "address": "City Hall, Room 140, 1 Carlton B. Goodlett Place, SF 94102",
+      "phone": "311 or (415) 554-4400",
+      "website": "https://sftreasurer.org",
+      "key_actions": [
+        "Business Registration Certificate",
+        "Annual tax filing",
+        "Unified License fee collection"
+      ],
+      "notes": "First Year Free program waives initial registration fee for many businesses. Registration now required within 30 days of commencing business. BAN (Business Account Number) needed for all other permits."
+    },
+    {
+      "id": "dph",
+      "name": "Department of Public Health (DPH) \u2013 Environmental Health Branch",
+      "role": "Health permits for food facilities, body art, pools, hazardous materials",
+      "address": "49 South Van Ness Ave, Suite 600, SF 94103",
+      "phone": "(415) 252-3800",
+      "website": "https://www.sfdph.org/dph/EH/Food/",
+      "key_actions": [
+        "Health Permit to Operate (food)",
+        "Plan check review",
+        "Health inspections",
+        "Food Safety Manager certification requirement"
+      ],
+      "notes": "Online food application available at etaxstatement.sfgov.org/dphehbfoodpermit. Site evaluation available before signing a lease \u2014 highly recommended."
+    },
+    {
+      "id": "planning",
+      "name": "SF Planning Department",
+      "role": "Zoning compliance, use permits, conditional use authorization, formula retail",
+      "address": "49 South Van Ness Ave, 2nd Floor (Permit Center), SF 94103",
+      "phone": "Email: pic@sfgov.org",
+      "website": "https://sfplanning.org/permits",
+      "key_actions": [
+        "Zoning verification",
+        "Change of Use permit",
+        "Conditional Use Authorization (CUA)",
+        "Formula retail review",
+        "Signage permits"
+      ],
+      "notes": "As of Feb 2026, Permit Center only accepts online applications for in-kind replacements. Walk-ins for consultations on first-come basis. Office of Small Business offers permitting support. Check zoning BEFORE signing a lease."
+    },
+    {
+      "id": "dbi",
+      "name": "Department of Building Inspection (DBI)",
+      "role": "Building permits, tenant improvement permits, occupancy certificates",
+      "address": "49 South Van Ness Ave, SF 94103",
+      "phone": "(628) 652-3200",
+      "website": "https://sfdbi.org",
+      "key_actions": [
+        "Building permits for tenant improvements",
+        "Certificate of Final Completion",
+        "Electrical/plumbing/mechanical permits"
+      ],
+      "notes": "Required for any physical modifications to a space. Even minor changes (new walls, plumbing for food service, ADA modifications) require permits. PermitSF online portal launched Feb 2026 for some permit types."
+    },
+    {
+      "id": "fire",
+      "name": "San Francisco Fire Department (SFFD) \u2013 Fire Prevention",
+      "role": "Fire permits, occupancy load, fire safety inspections, hazardous materials",
+      "address": "698 2nd Street, Suite 300, SF 94107",
+      "phone": "(628) 652-3260",
+      "website": "https://sf-fire.org/our-organization/division-fire-prevention-investigation/permits",
+      "key_actions": [
+        "Fire permit",
+        "Occupancy load determination",
+        "Fire safety inspection",
+        "Hazardous materials permit",
+        "Fire alarm/sprinkler system approval"
+      ],
+      "notes": "Required for all places of assembly, restaurants, bars, and any business storing hazardous materials. Must be cleared before DPH will issue food permit."
+    },
+    {
+      "id": "sfpd",
+      "name": "San Francisco Police Department (SFPD)",
+      "role": "Permits for secondhand dealers, massage establishments, billiard halls, amusement devices",
+      "address": "SFPD Permit Section",
+      "phone": "(415) 553-1115",
+      "website": "https://www.sanfranciscopolice.org/get-service/permits",
+      "key_actions": [
+        "Secondhand dealer permit",
+        "Massage establishment permit",
+        "Dance hall permit",
+        "Amusement device permit",
+        "Pawnbroker permit"
+      ],
+      "notes": "Background checks required for most SFPD permits. Processing times vary significantly."
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment Commission",
+      "role": "Entertainment permits for live music, DJs, dancing, extended hours",
+      "address": "49 South Van Ness Ave, Suite 1240, SF 94103",
+      "phone": "(628) 652-6030",
+      "website": "https://sfgov.org/entertainment/permit-applications",
+      "key_actions": [
+        "Place of Entertainment (POE) permit",
+        "Limited Live Performance (LLP) permit",
+        "One-night event permit",
+        "Extended Hours permit"
+      ],
+      "notes": "POE permits required for regular live entertainment. LLP is a streamlined option for smaller venues. Neighborhood notification requirements may apply."
+    },
+    {
+      "id": "abc",
+      "name": "California Department of Alcoholic Beverage Control (ABC)",
+      "role": "Liquor licenses for on-premise and off-premise alcohol sales",
+      "address": "1515 Clay St, Suite 2206, Oakland CA 94612 (nearest office)",
+      "phone": "(510) 622-4970",
+      "website": "https://www.abc.ca.gov",
+      "key_actions": [
+        "Type 41 (On-Sale Beer & Wine, Eating Place)",
+        "Type 47 (On-Sale General, Eating Place)",
+        "Type 48 (On-Sale General, Public Premises)",
+        "Type 20 (Off-Sale Beer & Wine)",
+        "Type 21 (Off-Sale General)"
+      ],
+      "notes": "STATE agency, not city. License transfers are common and faster than new licenses. Type 47 is most common for restaurants. Census tract limits may apply. Costs range from $1,000-$15,000+ for new licenses; transfers can cost $50K-$300K+ depending on type and location."
+    },
+    {
+      "id": "dpw",
+      "name": "Department of Public Works (DPW) / SF Public Works",
+      "role": "Sidewalk permits, street space, awnings, outdoor seating, food truck routes",
+      "address": "49 South Van Ness Ave, SF 94103",
+      "phone": "(628) 271-2000",
+      "website": "https://bsm.sfdpw.org",
+      "key_actions": [
+        "Sidewalk caf\u00e9 permit (Shared Spaces program)",
+        "A-frame sign permit",
+        "Awning/canopy permit",
+        "Street space permit",
+        "Mobile food facility route approval"
+      ],
+      "notes": "Shared Spaces program (formerly temporary COVID parklets) has been made permanent. Application through sfpublicworks.org."
+    },
+    {
+      "id": "acc",
+      "name": "Animal Care and Control (ACC)",
+      "role": "Dog walker permits, pet-related business permits",
+      "address": "1200 15th Street, SF 94103",
+      "phone": "(415) 554-6364",
+      "website": "https://www.sfanimalcare.org",
+      "key_actions": [
+        "Commercial dog walker permit",
+        "Pet store permit"
+      ],
+      "notes": "Commercial dog walkers limited to max 8 dogs at a time. Background check and insurance required."
+    },
+    {
+      "id": "cannabis",
+      "name": "Office of Cannabis",
+      "role": "Cannabis business permits",
+      "address": "49 South Van Ness Ave, SF 94103",
+      "phone": "(628) 652-0420",
+      "website": "https://sf.gov/step-by-step/apply-cannabis-business-permit",
+      "key_actions": [
+        "Cannabis business permit (retail, delivery, manufacturing, distribution, testing)"
+      ],
+      "notes": "Cannabis Business Tax effective Jan 1, 2026 (1-5% of gross receipts). Requires both city permit and state license from DCC. Equity applicants receive priority."
+    },
+    {
+      "id": "sos",
+      "name": "California Secretary of State",
+      "role": "Entity formation (LLC, Corp, LP, LLP)",
+      "address": "Online filing at bizfileonline.sos.ca.gov",
+      "phone": "(916) 657-5448",
+      "website": "https://www.sos.ca.gov/business-programs",
+      "key_actions": [
+        "LLC Articles of Organization ($70)",
+        "Corporation Articles of Incorporation ($100)",
+        "Statement of Information (annual/biennial)",
+        "Fictitious Business Name registration (county level)"
+      ],
+      "notes": "Must register entity with state BEFORE registering business with SF TTX. Can file online. Fictitious Business Name filed with SF County Clerk."
+    },
+    {
+      "id": "ethics",
+      "name": "SF Ethics Commission",
+      "role": "Permit consultant registration (relevant for OUR business)",
+      "address": "25 Van Ness Ave, Suite 220, SF 94102",
+      "phone": "(415) 252-3100",
+      "website": "https://sfethics.org",
+      "key_actions": [
+        "Permit consultant registration",
+        "Quarterly activity reporting"
+      ],
+      "notes": "CRITICAL FOR US: Anyone providing permit consulting services for compensation MUST register within 5 business days. Quarterly reports required. This is our legal requirement and competitive moat."
+    },
+    {
+      "id": "olse",
+      "name": "Office of Labor Standards Enforcement (OLSE)",
+      "role": "Enforces SF employment ordinances: minimum wage, paid sick leave, health care security, paid parental leave, Fair Chance, commuter benefits",
+      "address": "City Hall, 1 Dr Carlton B. Goodlett Place, SF 94102",
+      "phone": "(415) 554-6235",
+      "website": "https://www.sf.gov/departments--office-labor-standards-enforcement",
+      "key_actions": [
+        "Minimum Wage Ordinance compliance ($18.67/hr as of 2024, adjusted annually)",
+        "Paid Sick Leave Ordinance (PSLO) compliance",
+        "Health Care Security Ordinance (HCSO) compliance",
+        "Paid Parental Leave Ordinance (PPLO) compliance",
+        "Fair Chance Ordinance (criminal history inquiries)",
+        "Commuter Benefits Ordinance",
+        "Lactation in the Workplace Ordinance",
+        "Required workplace poster display"
+      ],
+      "notes": "SF has MORE employer requirements than any other US city. Layered on top of California state law. Minimum wage is adjusted annually by CPI. HCSO applies to employers with 20+ employees worldwide ($2.56-$3.85/hr per employee for healthcare in 2026). PSLO: 1 hr per 30 hrs worked, caps at 40 hrs (<10 employees) or 72 hrs (10+ employees)."
+    },
+    {
+      "id": "pro_music",
+      "name": "Performing Rights Organizations (ASCAP, BMI, SESAC, GMR)",
+      "role": "Music licensing for public performance of copyrighted music",
+      "address": "National \u2014 apply online",
+      "phone": "ASCAP: (800) 505-4052 / BMI: (888) 689-5264 / SESAC: (800) 826-9996",
+      "website": "https://www.ascap.com/help/ascap-licensing",
+      "key_actions": [
+        "ASCAP blanket license",
+        "BMI blanket license",
+        "SESAC blanket license",
+        "GMR license (newer, smaller catalog)"
+      ],
+      "notes": "CRITICAL: Any business playing music publicly \u2014 even background Spotify (which is NOT licensed for commercial use) \u2014 needs PRO licenses. Only exemption: establishments under 3,750 sq ft playing conventional radio/TV with 6 or fewer speakers and no cover charge. PROs actively send auditors to businesses. Fines: $750 per song per infringement. Annual cost for all 3: ~$400-$700 for a typical small restaurant/retail. Alternative: use a B2B music service (Rockbot, Soundtrack, Soundsuit) that bundles PRO licensing."
+    },
+    {
+      "id": "sfe",
+      "name": "SF Environment (Dept of Environment)",
+      "role": "Waste reduction, recycling, composting mandates, environmental compliance",
+      "address": "1155 Market Street, 3rd Floor, SF 94103",
+      "phone": "(415) 355-3700",
+      "website": "https://sfenvironment.org",
+      "key_actions": [
+        "Mandatory Recycling and Composting Ordinance compliance",
+        "Single-use plastics restrictions",
+        "Checkout bag ordinance (no free bags)",
+        "Food service ware ordinance (compostable required)",
+        "Green business certification (voluntary)"
+      ],
+      "notes": "SF requires ALL businesses to separate waste into 3 streams: recycling, composting, landfill. Food businesses must use compostable takeout containers. No polystyrene foam. Free technical assistance available from SF Environment for setup."
+    },
+    {
+      "id": "casp",
+      "name": "Certified Access Specialist (CASp) Program",
+      "role": "ADA and California accessibility compliance inspections",
+      "address": "Various \u2014 independent certified inspectors",
+      "phone": "Find inspectors at apps2.dgs.ca.gov/DSA/casp",
+      "website": "https://www.sf.gov/information--ada-compliance-business",
+      "key_actions": [
+        "CASp inspection of premises",
+        "Accessibility improvement recommendations",
+        "Accessible Barrier Removal Grant application (up to $10,000 from SF Office of Small Business)"
+      ],
+      "notes": "CRITICAL: SF is a hotspot for serial ADA lawsuits. California's Unruh Act allows $4,000+ per violation plus attorney fees. DBI does NOT conduct general ADA review during building permit sign-off \u2014 that's YOUR responsibility. CASp inspection provides legal benefits: 90-day stay on lawsuits + mandatory early evaluation conference if sued. SF grants up to $10,000 for CASp inspections and improvements."
+    }
+  ],
+  "universal_requirements": {
+    "description": "Every business operating in San Francisco must complete these steps, regardless of business type.",
+    "steps": [
+      {
+        "order": 1,
+        "name": "Choose business structure",
+        "agency": "sos",
+        "detail": "Decide: sole proprietorship, LLC, corporation, partnership. Most small businesses choose LLC for liability protection. File with CA Secretary of State if forming an entity.",
+        "cost": "$0 (sole prop) / $70 (LLC) / $100 (Corp)",
+        "timeline": "1-5 business days online",
+        "prerequisite": null,
+        "automation": {
+          "level": "full",
+          "what_claude_does": "Generate comparison analysis of LLC vs Corp vs Sole Prop for client's specific situation. Pre-fill Articles of Organization. Generate operating agreement template.",
+          "what_nathe_does": "Review recommendation with client. Client signs and submits.",
+          "data_needed": [
+            "legal_name",
+            "business_name",
+            "business_address",
+            "registered_agent_preference"
+          ]
+        }
+      },
+      {
+        "order": 2,
+        "name": "Obtain EIN (Employer Identification Number)",
+        "agency": "IRS",
+        "detail": "Required for all entities except single-member sole proprietorships with no employees. Free from IRS.gov.",
+        "cost": "$0",
+        "timeline": "Instant online",
+        "prerequisite": "Business structure decided",
+        "automation": {
+          "level": "full",
+          "what_claude_does": "Walk client through IRS online application step-by-step. Can pre-fill all fields based on intake data. Generate the application answers.",
+          "what_nathe_does": "Client submits on IRS.gov (cannot be done by third party).",
+          "data_needed": [
+            "legal_name",
+            "ssn_last4",
+            "entity_type",
+            "business_address",
+            "formation_date"
+          ]
+        }
+      },
+      {
+        "order": 3,
+        "name": "Verify zoning compliance",
+        "agency": "planning",
+        "detail": "BEFORE signing a lease or committing to a location, verify that your intended use is Permitted (P) or Conditionally Permitted (C) in that zoning district. If Not Permitted (NP), you cannot operate there. Use SF Planning's Property Information Map.",
+        "cost": "$0 for self-research / varies for formal determination",
+        "timeline": "Same day for self-research; weeks for formal letter",
+        "prerequisite": "Know your intended business location",
+        "automation": {
+          "level": "partial",
+          "what_claude_does": "Look up zoning district for client's address using SF Planning Property Information Map. Cross-reference intended use against permitted/conditional/not-permitted uses for that district. Generate zoning compliance memo.",
+          "what_nathe_does": "Visit Permit Center to confirm if needed. Handle any Change of Use application.",
+          "data_needed": [
+            "business_address",
+            "business_type",
+            "specific_activities"
+          ]
+        }
+      },
+      {
+        "order": 4,
+        "name": "Register business with SF TTX",
+        "agency": "ttx",
+        "detail": "Obtain Business Registration Certificate. Required within 30 days of commencing business. Apply online. First Year Free program may waive fee. You receive a Business Account Number (BAN) which is required for all other SF permits.",
+        "cost": "$0 (First Year Free for qualifying) to $35,002 based on gross receipts + $4 state fee",
+        "timeline": "10-15 business days for certificate after submission and payment",
+        "prerequisite": "Business structure formed, location identified",
+        "automation": {
+          "level": "partial",
+          "what_claude_does": "Pre-fill the online registration form with all client data. Calculate estimated registration fee. Determine First Year Free eligibility. Generate step-by-step submission guide with screenshots.",
+          "what_nathe_does": "Client reviews and submits (DocuSign required). Payment processing.",
+          "data_needed": [
+            "legal_name",
+            "business_name",
+            "entity_type",
+            "ein",
+            "business_address",
+            "start_date",
+            "estimated_gross_receipts",
+            "naics_code"
+          ]
+        }
+      },
+      {
+        "order": 5,
+        "name": "Obtain California Seller's Permit (if selling tangible goods)",
+        "agency": "CDTFA",
+        "detail": "Required if selling physical products. Apply through California Department of Tax and Fee Administration (CDTFA). Free. Allows you to collect sales tax (SF rate: 8.625% in 2026).",
+        "cost": "$0",
+        "timeline": "Instant for many applicants online",
+        "prerequisite": null
+      },
+      {
+        "order": 6,
+        "name": "Fictitious Business Name (DBA) if applicable",
+        "agency": "SF County Clerk",
+        "detail": "Required if operating under a name different from your legal entity name. File with SF County Clerk-Recorder's office. Must also publish in a local newspaper.",
+        "cost": "$62 filing + newspaper publication costs (~$50-100)",
+        "timeline": "1-2 weeks",
+        "prerequisite": "BAN from TTX"
+      }
+    ]
+  },
+  "business_type_profiles": [
+    {
+      "id": "restaurant",
+      "name": "Restaurant / Caf\u00e9 / Food Service",
+      "description": "Brick-and-mortar establishment preparing and serving food to the public",
+      "agencies_involved": [
+        "ttx",
+        "planning",
+        "dbi",
+        "dph",
+        "fire",
+        "dpw"
+      ],
+      "optional_agencies": [
+        "abc",
+        "entertainment"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Zoning Compliance / Change of Use",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": true,
+          "notes": "If location was not previously a restaurant, a Change of Use permit may be required. Formula retail (11+ locations) triggers Conditional Use Authorization."
+        },
+        {
+          "permit": "Building Permit (Tenant Improvement)",
+          "agency": "dbi",
+          "order": 3,
+          "mandatory": true,
+          "notes": "Required for any buildout \u2014 kitchen equipment, plumbing, ventilation, ADA modifications. Must hire licensed architect/contractor."
+        },
+        {
+          "permit": "Health Permit to Operate",
+          "agency": "dph",
+          "order": 4,
+          "mandatory": true,
+          "notes": "Requires plan check ($), application fee, food safety manager certification, final inspection. Can request site evaluation BEFORE leasing. Online application available."
+        },
+        {
+          "permit": "Fire Permit / Inspection",
+          "agency": "fire",
+          "order": 5,
+          "mandatory": true,
+          "notes": "Fire clearance required before DPH issues health permit. Includes occupancy load, fire suppression system (hood system for cooking), exit signage, fire extinguishers."
+        },
+        {
+          "permit": "Sidewalk Caf\u00e9 / Shared Spaces Permit",
+          "agency": "dpw",
+          "order": 6,
+          "mandatory": false,
+          "notes": "For outdoor dining. Shared Spaces program made permanent. Application through SF Public Works."
+        },
+        {
+          "permit": "Liquor License",
+          "agency": "abc",
+          "order": 7,
+          "mandatory": false,
+          "notes": "Type 41 (Beer/Wine, Eating Place) or Type 47 (Full Bar, Eating Place). License transfers from previous occupant common. New licenses: $1,000-$15,000; transfers: $50K-$300K+."
+        },
+        {
+          "permit": "Entertainment Permit",
+          "agency": "entertainment",
+          "order": 8,
+          "mandatory": false,
+          "notes": "Required if offering live music, DJs, or dancing. Limited Live Performance permit for low-key entertainment."
+        }
+      ],
+      "additional_requirements": [
+        "Food Safety Manager Certification (at least 1 staff member)",
+        "Food Handler Cards for all food-handling employees",
+        "Workers' Compensation Insurance (if employees)",
+        "General Liability Insurance",
+        "Grease trap installation (plumbing permit required)",
+        "ADA compliance verification",
+        "Menu/signage compliance with SF health disclosure requirements",
+        "Music licensing: PRO licenses from ASCAP (~$150-400/yr), BMI (~$150-250/yr), and SESAC (~$100-150/yr) required if playing ANY music publicly. Exemption only for establishments under 3,750 sq ft playing radio with 6 or fewer speakers. Alternative: use B2B music service (~$30-60/mo) that bundles licensing.",
+        "ADA/Accessibility: CASp inspection strongly recommended ($500-$2,000) \u2014 provides legal protection against serial litigants. Apply for Accessible Barrier Removal Grant (up to $10,000) from Office of Small Business. SF is a hotspot for ADA lawsuits under Unruh Act ($4,000+ per violation).",
+        "Waste compliance: SF mandatory 3-stream waste separation (recycling, composting, landfill). Food businesses must use compostable takeout containers. No polystyrene. No free checkout bags ($0.25+ charge required). Free setup assistance from SF Environment.",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$5,000 - $50,000+ (excluding buildout)",
+      "estimated_timeline": "3-12 months depending on buildout complexity",
+      "common_pitfalls": [
+        "Signing a lease before verifying zoning \u2014 this is the #1 mistake",
+        "Not requesting a DPH site evaluation before committing to a space",
+        "Underestimating buildout permit timeline (DBI can take months)",
+        "Not budgeting for liquor license transfer costs",
+        "Forgetting about grease interceptor requirements",
+        "Not registering for Gross Receipts Tax in addition to registration"
+      ]
+    },
+    {
+      "id": "retail",
+      "name": "Retail Store (Non-Food)",
+      "description": "Physical retail location selling goods to the public",
+      "agencies_involved": [
+        "ttx",
+        "planning",
+        "dbi"
+      ],
+      "optional_agencies": [
+        "fire",
+        "sfpd",
+        "dpw"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Zoning Compliance / Change of Use",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": true,
+          "notes": "Most retail uses are permitted in commercial zones. Formula retail (11+ locations worldwide) requires CUA hearing. Check neighborhood-specific restrictions."
+        },
+        {
+          "permit": "Building Permit (if modifying space)",
+          "agency": "dbi",
+          "order": 3,
+          "mandatory": false,
+          "notes": "Only if making physical modifications. Minor cosmetic changes may not require permits."
+        },
+        {
+          "permit": "Seller's Permit",
+          "agency": "CDTFA",
+          "order": 4,
+          "mandatory": true,
+          "notes": "Required for collecting sales tax on tangible goods."
+        },
+        {
+          "permit": "Signage Permit",
+          "agency": "planning",
+          "order": 5,
+          "mandatory": false,
+          "notes": "Required for new exterior signage. Planning Code Article 6 governs signs. Some historic districts have additional restrictions."
+        }
+      ],
+      "additional_requirements": [
+        "ADA compliance",
+        "Weights and Measures registration (if using scales)",
+        "Secondhand Dealer Permit from SFPD (if selling used goods)",
+        "Tobacco Retailer License from DPH (if selling tobacco \u2014 note SF ban on flavored tobacco)",
+        "Music licensing: PRO licenses from ASCAP (~$150-400/yr), BMI (~$150-250/yr), and SESAC (~$100-150/yr) required if playing ANY music publicly. Exemption only for establishments under 3,750 sq ft playing radio with 6 or fewer speakers. Alternative: use B2B music service (~$30-60/mo) that bundles licensing.",
+        "ADA/Accessibility: CASp inspection strongly recommended ($500-$2,000) \u2014 provides legal protection against serial litigants. Apply for Accessible Barrier Removal Grant (up to $10,000) from Office of Small Business. SF is a hotspot for ADA lawsuits under Unruh Act ($4,000+ per violation).",
+        "Waste compliance: SF mandatory 3-stream waste separation (recycling, composting, landfill). Food businesses must use compostable takeout containers. No polystyrene. No free checkout bags ($0.25+ charge required). Free setup assistance from SF Environment.",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$500 - $5,000 (excluding buildout)",
+      "estimated_timeline": "2-8 weeks",
+      "common_pitfalls": [
+        "Formula retail trap \u2014 if you or your franchisor have 11+ locations worldwide, you need CUA",
+        "Not checking for neighborhood-specific use restrictions",
+        "Signage violations \u2014 SF sign code is unusually strict",
+        "Not registering for Commercial Rents Tax if applicable"
+      ]
+    },
+    {
+      "id": "food_truck",
+      "name": "Food Truck / Mobile Food Facility",
+      "description": "Vehicle-based food service operating on public or private property",
+      "agencies_involved": [
+        "ttx",
+        "dph",
+        "fire",
+        "dpw",
+        "planning"
+      ],
+      "optional_agencies": [],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Health Permit (Mobile Food Facility)",
+          "agency": "dph",
+          "order": 2,
+          "mandatory": true,
+          "notes": "5 categories of MFF. Requires plan check, commissary verification, restroom verification, final inspection. Must have approved commissary kitchen."
+        },
+        {
+          "permit": "Fire Marshal Clearance",
+          "agency": "fire",
+          "order": 3,
+          "mandatory": true,
+          "notes": "Fire safety inspection of truck, propane/gas systems, fire extinguisher, suppression hood."
+        },
+        {
+          "permit": "Public Property Route Approval (if operating on public streets)",
+          "agency": "dpw",
+          "order": 4,
+          "mandatory": true,
+          "notes": "Buffer rules: 75ft from restaurants, 500ft from elementary schools, 1,000ft from high schools during hours."
+        },
+        {
+          "permit": "Temporary Use Authorization (if operating on private property)",
+          "agency": "planning",
+          "order": 5,
+          "mandatory": false,
+          "notes": "Fees start at $500. Organizations like Off the Grid manage permitted sites (charge 10-20% of sales)."
+        }
+      ],
+      "additional_requirements": [
+        "Commissary kitchen agreement",
+        "DMV vehicle registration",
+        "Vehicle insurance",
+        "Workers' Compensation Insurance (if employees)",
+        "General Liability Insurance ($2M)",
+        "Food Safety Manager Certification",
+        "Seller's Permit from CDTFA",
+        "Waste compliance: SF mandatory 3-stream waste separation (recycling, composting, landfill). Food businesses must use compostable takeout containers. No polystyrene. No free checkout bags ($0.25+ charge required). Free setup assistance from SF Environment.",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$2,000 - $5,000 in permits/fees + $1,000+ yearly insurance",
+      "estimated_timeline": "4-8 weeks",
+      "common_pitfalls": [
+        "Not securing a commissary agreement before applying",
+        "Underestimating buffer zone restrictions \u2014 significantly limits operating locations",
+        "Not budgeting for Off the Grid or similar platform fees",
+        "Late license renewal penalties (10-50%)"
+      ]
+    },
+    {
+      "id": "home_based",
+      "name": "Home-Based Business",
+      "description": "Business operated from a residential address (consulting, e-commerce, freelancing, cottage food)",
+      "agencies_involved": [
+        "ttx"
+      ],
+      "optional_agencies": [
+        "dph",
+        "sos"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true,
+          "notes": "Yes, even home-based businesses must register with TTX. First Year Free program often applies."
+        },
+        {
+          "permit": "Cottage Food Operation Permit (if making food at home)",
+          "agency": "dph",
+          "order": 2,
+          "mandatory": false,
+          "notes": "California Homemade Food Act allows certain foods to be made and sold from home. Class A (direct sales only) vs Class B (sell to third parties like cafes). Class B requires kitchen inspection."
+        }
+      ],
+      "additional_requirements": [
+        "SF does NOT require a Home Occupancy Permit (unlike many cities)",
+        "Must follow rules: no employees at home, no customer visits generating traffic, no signage, no inventory that creates hazard",
+        "Seller's Permit from CDTFA if selling goods",
+        "Consider LLC formation for liability protection"
+      ],
+      "estimated_total_cost_range": "$0 - $500",
+      "estimated_timeline": "1-2 weeks",
+      "common_pitfalls": [
+        "Thinking you don't need to register because you work from home \u2014 you do",
+        "Cottage food operators: Class B requires DPH inspection and has $75K annual revenue cap",
+        "Landlord/HOA restrictions on home businesses"
+      ]
+    },
+    {
+      "id": "bar_nightclub",
+      "name": "Bar / Nightclub / Lounge",
+      "description": "Establishment primarily serving alcohol, potentially with entertainment",
+      "agencies_involved": [
+        "ttx",
+        "planning",
+        "dbi",
+        "abc",
+        "fire",
+        "entertainment",
+        "sfpd",
+        "dph"
+      ],
+      "optional_agencies": [
+        "dpw"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Zoning / Conditional Use Authorization",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": true,
+          "notes": "Bars often require CUA. Public hearing with Planning Commission. Neighborhood notification required. Can take 3-6 months."
+        },
+        {
+          "permit": "Building Permit (Tenant Improvement)",
+          "agency": "dbi",
+          "order": 3,
+          "mandatory": true
+        },
+        {
+          "permit": "Liquor License",
+          "agency": "abc",
+          "order": 4,
+          "mandatory": true,
+          "notes": "Type 48 (On-Sale General, Public Premises \u2014 no food requirement) or Type 47 (requires 50%+ food sales). New licenses may not be available in over-concentrated census tracts. Transfer is often the only path."
+        },
+        {
+          "permit": "Fire Permit / Occupancy Determination",
+          "agency": "fire",
+          "order": 5,
+          "mandatory": true
+        },
+        {
+          "permit": "Place of Entertainment Permit",
+          "agency": "entertainment",
+          "order": 6,
+          "mandatory": true,
+          "notes": "Required for any live entertainment, DJs, dancing. Involves sound study, community input, operating conditions."
+        },
+        {
+          "permit": "Health Permit (if serving food)",
+          "agency": "dph",
+          "order": 7,
+          "mandatory": false
+        },
+        {
+          "permit": "Extended Hours Permit (past 2am)",
+          "agency": "entertainment",
+          "order": 8,
+          "mandatory": false
+        }
+      ],
+      "additional_requirements": [
+        "Security plan may be required",
+        "Sound mitigation measures",
+        "Responsible Beverage Service (RBS) training for all servers (state requirement)",
+        "Neighborhood outreach and community meeting",
+        "ABC posting requirements (30 days public notice)",
+        "Music licensing: PRO licenses from ASCAP (~$150-400/yr), BMI (~$150-250/yr), and SESAC (~$100-150/yr) required if playing ANY music publicly. Exemption only for establishments under 3,750 sq ft playing radio with 6 or fewer speakers. Alternative: use B2B music service (~$30-60/mo) that bundles licensing.",
+        "ADA/Accessibility: CASp inspection strongly recommended ($500-$2,000) \u2014 provides legal protection against serial litigants. Apply for Accessible Barrier Removal Grant (up to $10,000) from Office of Small Business. SF is a hotspot for ADA lawsuits under Unruh Act ($4,000+ per violation).",
+        "Waste compliance: SF mandatory 3-stream waste separation (recycling, composting, landfill). Food businesses must use compostable takeout containers. No polystyrene. No free checkout bags ($0.25+ charge required). Free setup assistance from SF Environment.",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$50,000 - $300,000+ (liquor license transfer is the big cost)",
+      "estimated_timeline": "6-18 months",
+      "common_pitfalls": [
+        "Not checking census tract saturation for liquor licenses before committing to a location",
+        "Underestimating CUA timeline and neighborhood opposition risk",
+        "Not budgeting for sound engineering and mitigation",
+        "Entertainment Commission conditions can be very restrictive"
+      ]
+    },
+    {
+      "id": "personal_services",
+      "name": "Personal Services (Salon, Barbershop, Spa, Tattoo)",
+      "description": "Business providing personal care services",
+      "agencies_involved": [
+        "ttx",
+        "planning",
+        "dph"
+      ],
+      "optional_agencies": [
+        "dbi",
+        "sfpd"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Zoning Compliance",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": true
+        },
+        {
+          "permit": "Health Permit (body art, tattooing, piercing)",
+          "agency": "dph",
+          "order": 3,
+          "mandatory": false,
+          "notes": "Required for tattoo/piercing establishments. Annual inspection."
+        },
+        {
+          "permit": "Massage Establishment Permit",
+          "agency": "sfpd",
+          "order": 4,
+          "mandatory": false,
+          "notes": "Required for massage businesses. Background check for all practitioners. SFPD issues."
+        },
+        {
+          "permit": "State Board of Barbering and Cosmetology License",
+          "agency": "CA_state",
+          "order": 5,
+          "mandatory": true,
+          "notes": "State license required for all cosmetologists, barbers, estheticians, nail technicians. Establishment license also required."
+        }
+      ],
+      "additional_requirements": [
+        "Individual practitioner licenses from CA Board of Barbering and Cosmetology",
+        "Establishment license from state board",
+        "Healthy Nail Salon Recognition Program (voluntary but recommended)",
+        "Workers' Comp insurance if employees",
+        "Music licensing: PRO licenses from ASCAP (~$150-400/yr), BMI (~$150-250/yr), and SESAC (~$100-150/yr) required if playing ANY music publicly. Exemption only for establishments under 3,750 sq ft playing radio with 6 or fewer speakers. Alternative: use B2B music service (~$30-60/mo) that bundles licensing.",
+        "ADA/Accessibility: CASp inspection strongly recommended ($500-$2,000) \u2014 provides legal protection against serial litigants. Apply for Accessible Barrier Removal Grant (up to $10,000) from Office of Small Business. SF is a hotspot for ADA lawsuits under Unruh Act ($4,000+ per violation).",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$1,000 - $5,000",
+      "estimated_timeline": "3-8 weeks",
+      "common_pitfalls": [
+        "Not getting the state establishment license in addition to individual licenses",
+        "Massage businesses: SFPD background check can take weeks",
+        "ADA accessibility requirements for new salon buildouts"
+      ]
+    },
+    {
+      "id": "professional_services",
+      "name": "Professional Services / Office-Based (Consulting, Tech, Creative)",
+      "description": "Office-based business not selling goods or serving food",
+      "agencies_involved": [
+        "ttx"
+      ],
+      "optional_agencies": [
+        "planning",
+        "sos"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true,
+          "notes": "This may be your ONLY required permit. First Year Free program likely applies."
+        },
+        {
+          "permit": "Zoning Compliance (if leasing commercial space)",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": false,
+          "notes": "Office use is permitted in most commercial/mixed-use zones. Verify before signing lease."
+        }
+      ],
+      "additional_requirements": [
+        "Professional licenses from relevant state boards (CPA, attorney, architect, contractor, etc.)",
+        "LLC/Corp formation recommended for liability protection",
+        "Gross Receipts Tax filing (annual, based on SF-attributable revenue)",
+        "Consider E&O insurance",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$0 - $500",
+      "estimated_timeline": "1-2 weeks",
+      "common_pitfalls": [
+        "Not registering at all because 'I'm just freelancing' \u2014 if you have SF income, you must register",
+        "Not filing annual Gross Receipts Tax even if tax owed is $0",
+        "Permit consultant businesses (like ours!) must also register with Ethics Commission"
+      ]
+    },
+    {
+      "id": "popup",
+      "name": "Pop-Up / Temporary Retail",
+      "description": "Short-term retail or food operation, including farmer's market vendors and event booths",
+      "agencies_involved": [
+        "ttx",
+        "planning",
+        "dph"
+      ],
+      "optional_agencies": [
+        "fire",
+        "dpw"
+      ],
+      "permits_required": [
+        {
+          "permit": "Business Registration Certificate",
+          "agency": "ttx",
+          "order": 1,
+          "mandatory": true
+        },
+        {
+          "permit": "Temporary Use Authorization (TUA)",
+          "agency": "planning",
+          "order": 2,
+          "mandatory": true,
+          "notes": "Required for temporary commercial use. Fees start at $500. Duration limits apply."
+        },
+        {
+          "permit": "Temporary Food Facility Permit (if food)",
+          "agency": "dph",
+          "order": 3,
+          "mandatory": false,
+          "notes": "Required for food vendors at events. Extra fee if you don't already hold an SF food permit."
+        }
+      ],
+      "additional_requirements": [
+        "Vacant to Vibrant program offers free rent + grants for downtown pop-ups (competitive application)",
+        "Tenderloin Storefront Opportunity Grant: $50K grant for 3-year leases (5 winners from 23 applicants)",
+        "Insurance typically required by landlord/event organizer",
+        "Seller's Permit from CDTFA if selling goods",
+        "Music licensing: PRO licenses from ASCAP (~$150-400/yr), BMI (~$150-250/yr), and SESAC (~$100-150/yr) required if playing ANY music publicly. Exemption only for establishments under 3,750 sq ft playing radio with 6 or fewer speakers. Alternative: use B2B music service (~$30-60/mo) that bundles licensing.",
+        "SF employer requirements (if hiring): SF minimum wage $18.67/hr (adjusted annually). Paid Sick Leave (1hr/30hrs worked). HCSO healthcare spending (20+ employees: $2.56-$3.85/hr). Paid Parental Leave (20+ employees). Fair Chance Ordinance (no criminal history questions until conditional offer). Commuter Benefits (20+ employees). Required workplace posters from OLSE."
+      ],
+      "estimated_total_cost_range": "$500 - $3,000",
+      "estimated_timeline": "2-6 weeks",
+      "common_pitfalls": [
+        "Not realizing you need TTX registration even for a temporary pop-up",
+        "Missing Vacant to Vibrant application windows",
+        "Food pop-ups: underestimating DPH requirements and lead time"
+      ]
+    }
+  ],
+  "key_programs_and_resources": [
+    {
+      "name": "First Year Free",
+      "agency": "ttx",
+      "description": "Waives first-year business registration fee for qualifying new businesses",
+      "url": "https://sftreasurer.org/business/first-year-free"
+    },
+    {
+      "name": "Vacant to Vibrant",
+      "agency": "OEWD / SF New Deal",
+      "description": "Free rent (3-6 months) + grants ($3K-$12K) for pop-ups in vacant downtown storefronts. 50% convert to long-term leases.",
+      "url": "https://www.vibrantsf.org/"
+    },
+    {
+      "name": "Tenderloin Storefront Opportunity Grant",
+      "agency": "OEWD",
+      "description": "$50,000 grant for 3-year lease in Tenderloin. Includes training and business plan development.",
+      "url": "https://sf.gov"
+    },
+    {
+      "name": "Office of Small Business",
+      "agency": "OEWD",
+      "description": "Free counseling, permitting navigation assistance, workshops. Overwhelmed but excellent resource.",
+      "url": "https://sf.gov/departments/office-small-business"
+    },
+    {
+      "name": "SF SCORE Chapter",
+      "agency": "SBA/SCORE",
+      "description": "Free business mentoring from experienced volunteers. Help with business plans, financials.",
+      "url": "https://sanfrancisco.score.org"
+    },
+    {
+      "name": "La Cocina",
+      "agency": "Nonprofit",
+      "description": "Food business incubator specifically for women and immigrants. Provides commercial kitchen access and business support.",
+      "url": "https://lacocinasf.org"
+    },
+    {
+      "name": "SF Small Business Development Center (SBDC)",
+      "agency": "SBA",
+      "description": "Free consulting, training, and resources for small businesses.",
+      "url": "https://www.sfsbdc.org"
+    },
+    {
+      "name": "PermitSF Portal",
+      "agency": "City of SF",
+      "description": "New online permit portal launched Feb 2026. Currently supports 5 permit types with online payment.",
+      "url": "https://permitsf.sfgov.org"
+    },
+    {
+      "name": "Accessible Barrier Removal Grant",
+      "agency": "Office of Small Business",
+      "description": "Up to $10,000 reimbursement for CASp inspections and ADA accessibility improvements. Rolling applications. Covers equipment, fixtures, architectural services, and labor.",
+      "url": "https://www.sf.gov/apply-grant-make-your-business-accessible"
+    },
+    {
+      "name": "SF Environment Green Business Program",
+      "agency": "SF Environment",
+      "description": "Free technical assistance to reduce waste, energy, and water use. Voluntary certification as a 'San Francisco Green Business' \u2014 good marketing.",
+      "url": "https://sfenvironment.org/green-businesses"
+    }
+  ],
+  "sf_specific_gotchas": [
+    {
+      "issue": "Formula Retail Restriction",
+      "detail": "Any business with 11+ locations worldwide (including franchisees) triggers Conditional Use Authorization \u2014 a public hearing before the Planning Commission. This adds 3-6 months and significant cost. Some neighborhoods prohibit formula retail entirely.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "personal_services"
+      ]
+    },
+    {
+      "issue": "Gross Receipts Tax (not just registration)",
+      "detail": "In addition to business registration, SF imposes a Gross Receipts Tax on all businesses. Rate varies by industry (0.053% to 0.894%). Must file annually even if no tax is owed. Separate from state income tax.",
+      "affects": [
+        "all"
+      ]
+    },
+    {
+      "issue": "Commercial Rents Tax",
+      "detail": "Businesses leasing commercial space in SF may owe Commercial Rents Tax on their rental expenses. Rate is 3.4% (was 1%, increased by voters). Applies to lessees, not landlords.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "bar_nightclub",
+        "personal_services"
+      ]
+    },
+    {
+      "issue": "Homelessness Gross Receipts Tax",
+      "detail": "Additional tax on businesses with $50M+ in SF gross receipts. Likely not applicable to small businesses but worth noting.",
+      "affects": [
+        "large_businesses_only"
+      ]
+    },
+    {
+      "issue": "Prop M License Fee Changes (2026)",
+      "detail": "Beginning in 2026, some license fees are waived per Prop M. Businesses may see $0 on some license line items but still must maintain the license itself.",
+      "affects": [
+        "all"
+      ]
+    },
+    {
+      "issue": "Deemed Approved Ordinance (H73 License)",
+      "detail": "Applies to bars/restaurants in residential or mixed-use areas. Sets operating conditions (noise, hours, etc.) that are automatically imposed. Violations can trigger community complaints and enforcement.",
+      "affects": [
+        "bar_nightclub",
+        "restaurant"
+      ]
+    },
+    {
+      "issue": "Shared Spaces (Parklets/Outdoor Dining)",
+      "detail": "The pandemic-era Shared Spaces program is now permanent. Permits available through DPW. Popular but has ongoing fees and compliance requirements.",
+      "affects": [
+        "restaurant",
+        "retail"
+      ]
+    },
+    {
+      "issue": "Cannabis Business Tax (New 2026)",
+      "detail": "Effective Jan 1, 2026. 1-5% gross receipts tax on cannabis businesses IN ADDITION to regular Gross Receipts Tax.",
+      "affects": [
+        "cannabis"
+      ]
+    },
+    {
+      "issue": "Music Licensing (PRO) Requirement",
+      "detail": "ANY business playing music publicly needs licenses from ASCAP, BMI, and SESAC (and potentially GMR). This includes background music, Spotify/Pandora (NOT licensed for commercial use), live bands, DJs, karaoke, and jukeboxes. Only exemption: under 3,750 sq ft with conventional radio, 6 or fewer speakers, no cover charge. PROs actively audit businesses. Fines: $750 PER SONG. Annual cost for all 3 PROs: ~$400-$700 for typical small business. Cheaper alternative: B2B music services like Rockbot, Soundtrack Your Brand, or Soundsuit bundle PRO licensing into their subscription (~$30-60/mo).",
+      "affects": [
+        "restaurant",
+        "retail",
+        "bar_nightclub",
+        "personal_services",
+        "popup"
+      ]
+    },
+    {
+      "issue": "ADA Compliance and Serial Litigation Risk",
+      "detail": "SF is a national hotspot for serial ADA litigants. California's Unruh Civil Rights Act allows minimum $4,000 per violation plus attorney fees \u2014 no proof of actual damages needed. DBI does NOT check for ADA compliance during building permit approval \u2014 that's your architect/contractor's responsibility (and ultimately yours). Get a CASp inspection ($500-$2,000) for legal protection: it triggers a 90-day stay on any lawsuit and mandatory early evaluation. SF offers Accessible Barrier Removal Grants up to $10,000.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "bar_nightclub",
+        "personal_services"
+      ]
+    },
+    {
+      "issue": "SF Employer Requirements (Beyond State Law)",
+      "detail": "SF has the most extensive local employment ordinances in the US, layered ON TOP of California law. Key requirements: Minimum wage $18.67/hr (adjusted annually). Paid Sick Leave: 1hr/30hrs worked, caps at 40 or 72 hrs depending on employer size. Health Care Security Ordinance (HCSO): employers with 20+ employees must spend $2.56-$3.85/hr per employee on healthcare. Paid Parental Leave: employers with 20+ employees must supplement CA Paid Family Leave to 100% of wages for 8 weeks. Fair Chance Ordinance: cannot ask about criminal history until after conditional offer. Commuter Benefits: employers with 20+ employees must offer pre-tax transit benefits. Lactation accommodation required. Multiple required workplace posters.",
+      "affects": [
+        "all_with_employees"
+      ]
+    },
+    {
+      "issue": "Mandatory Recycling and Composting",
+      "detail": "All SF businesses must separate waste into 3 streams: recycling, composting, and landfill. Food businesses must use compostable takeout containers (no polystyrene). No free checkout bags (must charge $0.25+). Violations can result in fines. SF Environment offers free technical assistance to set up compliant waste systems.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "food_truck",
+        "bar_nightclub"
+      ]
+    },
+    {
+      "issue": "Tobacco Product Sale Ban",
+      "detail": "SF has banned the sale of ALL flavored tobacco products, including menthol cigarettes. E-cigarettes/vapes without FDA premarket approval are also banned. If you're opening a retail store, do NOT plan on selling tobacco/vape products unless you verify current regulations.",
+      "affects": [
+        "retail"
+      ]
+    },
+    {
+      "issue": "Spotify/Pandora Not Licensed for Business Use",
+      "detail": "Personal Spotify, Apple Music, Pandora, and similar streaming subscriptions explicitly prohibit commercial/business use in their terms of service. Playing personal streaming in your business is BOTH a TOS violation AND a PRO licensing violation. Use a licensed B2B music service instead.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "bar_nightclub",
+        "personal_services"
+      ]
+    },
+    {
+      "issue": "Lease Review \u2014 ADA and Accessibility Allocation",
+      "detail": "Before signing a lease, understand who is responsible for ADA compliance \u2014 the landlord or tenant. SF's former ABE ordinance required landlords to handle primary entrance accessibility, but the program ended April 2025. Current law still requires compliance but responsibility is often ambiguous. Negotiate this explicitly in your lease. Administrative Code Chapter 38 requires landlords to provide an Access Information Notice to tenants for spaces 7,500 sq ft or less.",
+      "affects": [
+        "restaurant",
+        "retail",
+        "bar_nightclub",
+        "personal_services"
+      ]
+    }
+  ]
+}
